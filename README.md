@@ -77,7 +77,7 @@ sudo systemctl start docker
 docker compose up --build -d
 docker compose -f cassandra/docker-compose.yml up --build -d
 ```
-## #Активация bash оболочки сервера
+### Активация bash оболочки сервера
 ```bash
 docker exec -it server /bin/bash
 ```
