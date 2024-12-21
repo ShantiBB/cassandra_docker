@@ -1,0 +1,17 @@
+services:
+  cassandra:
+    image: cassandra:5.0
+    container_name: "cassandra"
+    mem_limit: 4g
+    networks:
+      main_network:
+        ipv4_address: 192.168.1.200
+    ports:
+      - "9042:9042"
+    environment:
+      - CASSANDRA_LISTEN_ADDRESS=192.168.1.200
+      - CASSANDRA_RPC_ADDRESS=192.168.1.200
+
+networks:
+  main_network:
+    external: true
